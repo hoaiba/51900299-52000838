@@ -8,7 +8,8 @@ namespace DTO
 {
     public class DTO_MonHoc
     {
-        private string idMH, tenMH, maKhoa, maGV;
+        private string idMH, tenMH, thu, maKhoa, maGV;
+        private int ca;
 
         public string get_idMH
         {
@@ -30,10 +31,22 @@ namespace DTO
             get { return maGV; }
             set { maGV = value; }
         }
-        public DTO_MonHoc(string idMH, string tenMH, string maKhoa, string maGV)
+        public string get_thu
+        {
+            get { return thu; }
+            set { thu = value; }
+        }
+        public int get_ca
+        {
+            get { return ca; }
+            set { ca = value; }
+        }
+        public DTO_MonHoc(string idMH, string tenMH, string thu, int ca, string maKhoa, string maGV)
         {
             this.idMH = idMH;
             this.tenMH = tenMH;
+            this.thu = thu;
+            this.ca = ca;
             this.maKhoa = maKhoa;
             this.maGV = maGV;
         }

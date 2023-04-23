@@ -55,5 +55,35 @@ namespace BUS
         {
             return l.selectHoTen(email);
         }
+
+        // Lấy dữ liệu HoTen từ GiangVien
+        public string selectID(string email)
+        {
+            return l.selectID(email);
+        }
+
+        // Hiển thị thông tin danh sách Lớp mà GV đang dạy
+        public DataTable selectLopGV()
+        {
+            return l.selectLopGV();
+        }
+
+        // Hiển thị thông tin danh sách SV trong lớp
+        public DataTable selectSVtrongLop()
+        {
+            return l.selectSVtrongLop();
+        }
+
+        // Lấy dữ liệu MatKhau từ GiangVien
+        public string selectMatKhau()
+        {
+            return l.selectMatkhau();
+        }
+
+        // Đổi mật khẩu
+        public void updateMatKhau()
+        {
+            l.updateMatKhau();
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,16 +11,18 @@ using System.Windows.Forms;
 
 namespace QuanLyBaoVangBuGV_TDTU_IT.FalcutyManager
 {
-    public partial class ClassroomNoti : Form
+    public partial class StudentInfo : Form
     {
-        public ClassroomNoti()
+        public BUS_SinhVien sv;
+        public StudentInfo()
         {
             InitializeComponent();
         }
 
-        private void ClassroomNoti_Load(object sender, EventArgs e)
+        private void StudentInfo_Load(object sender, EventArgs e)
         {
-
+            sv = new BUS_SinhVien("", "", "", "", "", "");
+            dataGridView1.DataSource = sv.selectQuery();
         }
     }
 }

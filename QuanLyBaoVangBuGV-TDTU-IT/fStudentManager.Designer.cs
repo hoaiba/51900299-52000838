@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAbsentRegister = new System.Windows.Forms.Button();
+            this.btnCompensateNoti = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
@@ -36,39 +36,38 @@
             this.btnClassList = new System.Windows.Forms.Button();
             this.btnAbsentNoti = new System.Windows.Forms.Button();
             this.btnTeacherList = new System.Windows.Forms.Button();
-            this.btnAbsentStatus = new System.Windows.Forms.Button();
             this.btnSchedule = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblLogout = new System.Windows.Forms.LinkLabel();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnAbsentRegister
+            // btnCompensateNoti
             // 
-            this.btnAbsentRegister.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAbsentRegister.FlatAppearance.BorderSize = 0;
-            this.btnAbsentRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAbsentRegister.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAbsentRegister.Location = new System.Drawing.Point(5, 313);
-            this.btnAbsentRegister.Name = "btnAbsentRegister";
-            this.btnAbsentRegister.Size = new System.Drawing.Size(263, 69);
-            this.btnAbsentRegister.TabIndex = 4;
-            this.btnAbsentRegister.Text = "Đăng ký báo vắng";
-            this.btnAbsentRegister.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAbsentRegister.UseVisualStyleBackColor = true;
-            this.btnAbsentRegister.Click += new System.EventHandler(this.btnAbsentRegister_Click);
+            this.btnCompensateNoti.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCompensateNoti.FlatAppearance.BorderSize = 0;
+            this.btnCompensateNoti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCompensateNoti.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCompensateNoti.Location = new System.Drawing.Point(5, 373);
+            this.btnCompensateNoti.Name = "btnCompensateNoti";
+            this.btnCompensateNoti.Size = new System.Drawing.Size(263, 86);
+            this.btnCompensateNoti.TabIndex = 4;
+            this.btnCompensateNoti.Text = "Thông tin báo bù";
+            this.btnCompensateNoti.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCompensateNoti.UseVisualStyleBackColor = true;
+            this.btnCompensateNoti.Click += new System.EventHandler(this.btnCompensateNoti_Click);
             // 
             // panel2
             // 
@@ -125,9 +124,9 @@
             this.btnClassList.FlatAppearance.BorderSize = 0;
             this.btnClassList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClassList.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClassList.Location = new System.Drawing.Point(5, 159);
+            this.btnClassList.Location = new System.Drawing.Point(5, 189);
             this.btnClassList.Name = "btnClassList";
-            this.btnClassList.Size = new System.Drawing.Size(263, 69);
+            this.btnClassList.Size = new System.Drawing.Size(263, 84);
             this.btnClassList.TabIndex = 2;
             this.btnClassList.Text = "Danh sách lớp";
             this.btnClassList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -140,9 +139,9 @@
             this.btnAbsentNoti.FlatAppearance.BorderSize = 0;
             this.btnAbsentNoti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAbsentNoti.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAbsentNoti.Location = new System.Drawing.Point(5, 236);
+            this.btnAbsentNoti.Location = new System.Drawing.Point(5, 281);
             this.btnAbsentNoti.Name = "btnAbsentNoti";
-            this.btnAbsentNoti.Size = new System.Drawing.Size(263, 69);
+            this.btnAbsentNoti.Size = new System.Drawing.Size(263, 84);
             this.btnAbsentNoti.TabIndex = 3;
             this.btnAbsentNoti.Text = "Thông tin báo vắng";
             this.btnAbsentNoti.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -155,29 +154,14 @@
             this.btnTeacherList.FlatAppearance.BorderSize = 0;
             this.btnTeacherList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTeacherList.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTeacherList.Location = new System.Drawing.Point(5, 82);
+            this.btnTeacherList.Location = new System.Drawing.Point(5, 97);
             this.btnTeacherList.Name = "btnTeacherList";
-            this.btnTeacherList.Size = new System.Drawing.Size(263, 69);
+            this.btnTeacherList.Size = new System.Drawing.Size(263, 84);
             this.btnTeacherList.TabIndex = 1;
             this.btnTeacherList.Text = "Danh sách GV";
             this.btnTeacherList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTeacherList.UseVisualStyleBackColor = true;
             this.btnTeacherList.Click += new System.EventHandler(this.btnTeacherList_Click);
-            // 
-            // btnAbsentStatus
-            // 
-            this.btnAbsentStatus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAbsentStatus.FlatAppearance.BorderSize = 0;
-            this.btnAbsentStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAbsentStatus.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAbsentStatus.Location = new System.Drawing.Point(5, 390);
-            this.btnAbsentStatus.Name = "btnAbsentStatus";
-            this.btnAbsentStatus.Size = new System.Drawing.Size(263, 69);
-            this.btnAbsentStatus.TabIndex = 5;
-            this.btnAbsentStatus.Text = "Trạng thái báo vắng";
-            this.btnAbsentStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAbsentStatus.UseVisualStyleBackColor = true;
-            this.btnAbsentStatus.Click += new System.EventHandler(this.btnAbsentStatus_Click);
             // 
             // btnSchedule
             // 
@@ -187,7 +171,7 @@
             this.btnSchedule.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSchedule.Location = new System.Drawing.Point(5, 5);
             this.btnSchedule.Name = "btnSchedule";
-            this.btnSchedule.Size = new System.Drawing.Size(263, 69);
+            this.btnSchedule.Size = new System.Drawing.Size(263, 84);
             this.btnSchedule.TabIndex = 0;
             this.btnSchedule.Text = "Lịch học";
             this.btnSchedule.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -200,16 +184,14 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.btnSchedule, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnAbsentStatus, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.btnAbsentRegister, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.btnCompensateNoti, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.btnAbsentNoti, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.btnClassList, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.btnTeacherList, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 180);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 6;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
@@ -230,34 +212,21 @@
             this.panel1.Size = new System.Drawing.Size(273, 744);
             this.panel1.TabIndex = 0;
             // 
-            // panel4
+            // panel5
             // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel4.Controls.Add(this.pictureBox1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(273, 180);
-            this.panel4.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::QuanLyBaoVangBuGV_TDTU_IT.Properties.Resources.User;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(269, 176);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.panel5.Controls.Add(this.panel3);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel5.Location = new System.Drawing.Point(0, 644);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(273, 100);
+            this.panel5.TabIndex = 1;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.lblLogout);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(273, 100);
@@ -280,14 +249,28 @@
             this.lblLogout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblLogout.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblLogout_LinkClicked);
             // 
-            // panel5
+            // panel4
             // 
-            this.panel5.Controls.Add(this.panel3);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 644);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(273, 100);
-            this.panel5.TabIndex = 1;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel4.Controls.Add(this.pictureBox1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(273, 180);
+            this.panel4.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::QuanLyBaoVangBuGV_TDTU_IT.Properties.Resources.User;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(269, 176);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // fStudentManager
             // 
@@ -307,23 +290,22 @@
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel5.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel5.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnAbsentRegister;
+        private System.Windows.Forms.Button btnCompensateNoti;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnClassList;
         private System.Windows.Forms.Button btnAbsentNoti;
         private System.Windows.Forms.Button btnTeacherList;
-        private System.Windows.Forms.Button btnAbsentStatus;
         private System.Windows.Forms.Button btnSchedule;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;

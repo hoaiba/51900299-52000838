@@ -12,14 +12,38 @@ namespace BUS
     {
         public DAL_PhieuBu l;
 
-        public BUS_PhieuBu(string idPb, DateTime ngaybu, string maPv, string lydo, string trangthai)
+        public BUS_PhieuBu(string idPb, DateTime ngaybu, string trangthai, string maPv)
         {
-            l = new DAL_PhieuBu(idPb, ngaybu, maPv, lydo, trangthai);
+            l = new DAL_PhieuBu(idPb, ngaybu, trangthai, maPv);
         }    
 
         public DataTable selectQuery()
         {
             return l.selectQuery();
+        }
+
+        // Thêm dữ liệu PhieuBu
+        public void addPhieuBu()
+        {
+            l.addPhieuBu();
+        }
+
+        // Hiển thị thông tin PhieuBu 
+        public DataTable selectPhieuBuGV(string id)
+        {
+            return l.selectPhieuBuGV(id);
+        }
+
+        // Cập nhật dữ liệu Duyệt 
+        public void updatePhieuVangDuyet()
+        {
+            l.updatePhieuVangDuyet();
+        }
+
+        // Cập nhật dữ liệu Không Duyệt 
+        public void updatePhieuVangKhongDuyet()
+        {
+            l.updatePhieuVangKhongDuyet();
         }
     }
 }

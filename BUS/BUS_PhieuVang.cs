@@ -21,5 +21,29 @@ namespace BUS
         {
             return l.selectQuery();
         }
+
+        // Thêm dữ liệu PhieuVang mới
+        public void addPhieuVang()
+        {
+            l.addPhieuVang();
+        }
+
+        // Hiển thị thông tin PhieuVang theo GiangVien dạy MonHoc
+        public DataTable selectPhieuVangGV(string id)
+        {
+            return l.selectPhieuVangGV(id);
+        }
+
+        // Cập nhật dữ liệu Duyệt 
+        public void updatePhieuVangDuyet()
+        {
+            l.updatePhieuVangDuyet();
+        }
+
+        // Cập nhật dữ liệu Không Duyệt 
+        public void updatePhieuVangKhongDuyet()
+        {
+            l.updatePhieuVangKhongDuyet();
+        }
     }
 }

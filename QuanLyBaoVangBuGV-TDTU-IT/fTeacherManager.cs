@@ -13,16 +13,17 @@ namespace QuanLyBaoVangBuGV_TDTU_IT
 {
     public partial class fTeacherManager : Form
     {
-        private string name;
+        private string name, id;
         public fTeacherManager()
         {
             InitializeComponent();
         }
 
-        public fTeacherManager(string textName) : this()
+        public fTeacherManager(string textName, string textID) : this()
         {
             name = textName;
             lblEmail.Text = name;
+            id = textID;
         }
 
         private void lblLogout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -33,17 +34,17 @@ namespace QuanLyBaoVangBuGV_TDTU_IT
         // Hiển thị màn hình Lịch giảng dạy
         private void btnSchedule_Click(object sender, EventArgs e)
         {
-            TeacherManager.Schedule f = new TeacherManager.Schedule();
+            TeacherManager.Schedule f = new TeacherManager.Schedule(id);
             f.TopLevel = false;
             panel5.Controls.Add(f);
             f.BringToFront();
             f.Show();
         }
 
-        // Hiển thị màn hình Danh sách lớp
+        // Hiển thị màn hình Thông tin báo bù
         private void btnClassList_Click(object sender, EventArgs e)
         {
-            TeacherManager.ClassList f = new TeacherManager.ClassList();
+            TeacherManager.CompensateNoti f = new TeacherManager.CompensateNoti(id);
             f.TopLevel = false;
             panel5.Controls.Add(f);
             f.BringToFront();
@@ -53,7 +54,7 @@ namespace QuanLyBaoVangBuGV_TDTU_IT
         // Hiển thị màn hình Danh sách SV
         private void btnStudentList_Click(object sender, EventArgs e)
         {
-            TeacherManager.StudentList f = new TeacherManager.StudentList();
+            TeacherManager.StudentList f = new TeacherManager.StudentList(id);
             f.TopLevel = false;
             panel5.Controls.Add(f);
             f.BringToFront();
@@ -63,7 +64,7 @@ namespace QuanLyBaoVangBuGV_TDTU_IT
         // Hiển thị màn hình Thông tin báo vắng
         private void btnAbsentNoti_Click(object sender, EventArgs e)
         {
-            TeacherManager.AbsentNoti f = new TeacherManager.AbsentNoti();
+            TeacherManager.AbsentNoti f = new TeacherManager.AbsentNoti(id);
             f.TopLevel = false;
             panel5.Controls.Add(f);
             f.BringToFront();
@@ -80,20 +81,27 @@ namespace QuanLyBaoVangBuGV_TDTU_IT
             f.Show();
         }
 
-        // Hiển thị màn hình Đăng ký báo bù
-        private void btnCompensateRegister_Click(object sender, EventArgs e)
+        private void btnCompensateNoti_Click(object sender, EventArgs e)
         {
-            TeacherManager.CompensateRegister f = new TeacherManager.CompensateRegister();
+            TeacherManager.CompensateNoti f = new TeacherManager.CompensateNoti(id);
             f.TopLevel = false;
             panel5.Controls.Add(f);
             f.BringToFront();
             f.Show();
         }
 
-        // Hiển thị màn hình Danh sách phê duyệt
-        private void btnAcceptList_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            TeacherManager.AcceptList f = new TeacherManager.AcceptList();
+            TeacherManager.ChangePassword f = new TeacherManager.ChangePassword(id);
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        // Hiển thị màn hình Đăng ký báo bù
+        private void btnCompensateRegister_Click(object sender, EventArgs e)
+        {
+            TeacherManager.CompensateRegister f = new TeacherManager.CompensateRegister();
             f.TopLevel = false;
             panel5.Controls.Add(f);
             f.BringToFront();

@@ -21,7 +21,7 @@ namespace QuanLyBaoVangBuGV_TDTU_IT.StudentManager
 
         private void ClassList_Load(object sender, EventArgs e)
         {
-            l = new BUS_MonHoc("", "", "", "");
+            l = new BUS_MonHoc("", "", "", 0, "", "");
             dataGridView1.DataSource = l.selectLichHoc();
         }
     }

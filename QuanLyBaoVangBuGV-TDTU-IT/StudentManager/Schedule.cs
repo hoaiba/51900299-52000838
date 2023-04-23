@@ -14,7 +14,7 @@ namespace QuanLyBaoVangBuGV_TDTU_IT.StudentManager
     public partial class Schedule : Form
     {
         private string idSV;
-        public BUS_Lop l;
+        public BUS_SinhVien sv;
         public Schedule()
         {
             InitializeComponent();
@@ -27,8 +27,8 @@ namespace QuanLyBaoVangBuGV_TDTU_IT.StudentManager
 
         private void Schedule_Load(object sender, EventArgs e)
         {
-            l = new BUS_Lop("", "", "");
-            dataGridView1.DataSource = l.selectLopSV(idSV);
+            sv = new BUS_SinhVien(idSV, "", "", "", "", "");
+            dataGridView1.DataSource = sv.selectLopSV();
         }
     }
 }

@@ -12,9 +12,9 @@ namespace BUS
     {
         public DAL_MonHoc l;
         
-        public BUS_MonHoc(string idMH, string tenMH, string maKhoa, string maGV)
+        public BUS_MonHoc(string idMH, string tenMH, string thu, int ca, string maKhoa, string maGV)
         {
-            l = new DAL_MonHoc(idMH, tenMH, maKhoa, maGV);    
+            l = new DAL_MonHoc(idMH, tenMH, thu, ca, maKhoa, maGV);    
         }
 
         // Hiển thị tất cả thông tin
@@ -27,6 +27,12 @@ namespace BUS
         public DataTable selectLichHoc()
         {
             return l.selectLichHoc();
+        }
+
+        // Hiển thị thông tin Lịch giảng dạy của GiangVien
+        public DataTable selectLichGV()
+        {
+            return l.selectLichGV();
         }
     }
 }

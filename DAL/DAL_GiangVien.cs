@@ -54,7 +54,7 @@ namespace DAL
         {
             string col = "PhanQuyen";
             string s = "SELECT PhanQuyen FROM GiangVien WHERE Email = '" + email + "' and MatKhau = '" + matkhau + "'";
-            return Connection.selectPhanQuyen(s, col);
+            return Connection.selectData(s, col);
         }
 
         // Lấy dữ liệu HoTen từ GiangVien
@@ -62,7 +62,44 @@ namespace DAL
         {
             string col = "HoTen";
             string s = "SELECT HoTen FROM GiangVien WHERE Email = '" + email + "'"; 
-            return Connection.selectHoTen(s, col);
+            return Connection.selectData(s, col);
+        }
+
+        // Láy dữ liệu ID từ GiangVien
+        public string selectID(string email)
+        {
+            string col = "ID_GV";
+            string s = "SELECT ID_GV FROM GiangVien WHERE Email = '" + email + "'";
+            return Connection.selectData(s, col);
+        }
+
+        // Hiển thị thông tin danh sách Lớp mà GV đang dạy
+        public DataTable selectLopGV()
+        {
+            string s = "SELECT ID_Lop, Ma_MH, Ten_MH, Thu, Ca FROM Lop, MonHoc WHERE Lop.Ma_MH = MonHoc.ID_MH AND Ma_GV = '" + l.get_idGv + "'";
+            return Connection.selectQuery(s);
+        }
+
+        // Hiển thị thông tin danh sách SV trong lớp
+        public DataTable selectSVtrongLop()
+        {
+            string s = "SELECT ID_SV, HoTen, Email, Ten_MH FROM SinhVien, MonHoc, Lop WHERE MonHoc.ID_MH = Lop.Ma_MH AND SinhVien.ID_SV = Lop.Ma_SV AND Ma_GV = '" + l.get_idGv + "'";
+            return Connection.selectQuery(s);
+        }
+
+        // Lấy dữ liệu MatKhau từ GiangVien
+        public string selectMatkhau()
+        {
+            string col = "MatKhau";
+            string s = "SELECT MatKhau FROM GiangVien WHERE ID_GV = '" + l.get_idGv + "'";
+            return Connection.selectData(s, col);
+        }
+
+        // Đổi mật khẩu
+        public void updateMatKhau()
+        {
+            string s = "UPDATE GiangVien SET MatKhau = '" + l.get_matkhauGv + "' WHERE ID_GV = '" + l.get_idGv + "'";
+            Connection.actionQuery(s);
         }
     }
 }

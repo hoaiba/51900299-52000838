@@ -13,16 +13,18 @@ namespace QuanLyBaoVangBuGV_TDTU_IT
     public partial class fFalcutyManager : Form
     {
         private string name;
+        private string id;
 
         public fFalcutyManager()
         {
             InitializeComponent();
         }
 
-        public fFalcutyManager(string textName) : this()
+        public fFalcutyManager(string textName, string textID) : this()
         {
             name = textName;
             lblEmail.Text = name;
+            id = textID;
         }
 
         private void lblLogout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -57,9 +59,26 @@ namespace QuanLyBaoVangBuGV_TDTU_IT
             f.Show();
         }
 
-        private void btnClassroomNoti_Click(object sender, EventArgs e)
+        private void btnTeacherInfo_Click(object sender, EventArgs e)
         {
-            FalcutyManager.ClassroomNoti f = new FalcutyManager.ClassroomNoti();
+            FalcutyManager.TeacherInfo f = new FalcutyManager.TeacherInfo();
+            f.TopLevel = false;
+            panel5.Controls.Add(f);
+            f.BringToFront();
+            f.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            FalcutyManager.ChangePassword f = new FalcutyManager.ChangePassword(id);
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void btnStudentInfo_Click(object sender, EventArgs e)
+        {
+            FalcutyManager.StudentInfo f = new FalcutyManager.StudentInfo();
             f.TopLevel = false;
             panel5.Controls.Add(f);
             f.BringToFront();

@@ -26,6 +26,8 @@ FOREIGN KEY (Ma_Khoa) REFERENCES Khoa(ID_Khoa)
 CREATE TABLE MonHoc (
 ID_MH CHAR(10) PRIMARY KEY,
 Ten_MH NVARCHAR(50) NOT NULL,
+Thu NVARCHAR(20) NOT NULL,
+Ca INT NOT NULL CHECK (Ca>0 AND Ca<5),
 Ma_Khoa CHAR(10) DEFAULT 'CNTT',
 Ma_GV CHAR(10) NOT NULL,
 FOREIGN KEY (Ma_Khoa) REFERENCES Khoa(ID_Khoa),
@@ -53,16 +55,15 @@ CREATE TABLE PhieuVang (
 ID_PV CHAR(10) PRIMARY KEY,
 NgayVang DATE NOT NULL,
 LyDo NVARCHAR(200) NOT NULL,
-TrangThai NVARCHAR(50) NOT NULL,
-Ma_Lop CHAR(10) NOT NULL,
-FOREIGN KEY (Ma_Lop) REFERENCES Lop(ID_Lop),
+TrangThai NVARCHAR(50) NOT NULL DEFAULT N'Chưa chấp thuận',
+Ma_MH CHAR(10) NOT NULL,
+FOREIGN KEY (Ma_MH) REFERENCES MonHoc(ID_MH),
 );
 
 CREATE TABLE PhieuBu (
 ID_PB CHAR(10) PRIMARY KEY,
 NgayBu DATE NOT NULL,
-LyDo NVARCHAR(200) NOT NULL,
-TrangThai NVARCHAR(50) NOT NULL,
+TrangThai NVARCHAR(50) DEFAULT N'Chưa chấp thuận',
 Ma_PV CHAR(10) NOT NULL,
 FOREIGN KEY (Ma_PV) REFERENCES PhieuVang(ID_PV)
 );
@@ -87,14 +88,14 @@ INSERT INTO GiangVien(ID_GV, HoTen, Email, SDT, MatKhau, PhanQuyen) VALUES
 ('GV011', N'Nguyễn Văn A', 'nguyenvana@tdtu.edu.vn', '0000000011', 'asd123', 'K')
 
 -- Insert Data MonHoc
-INSERT INTO MonHoc(ID_MH, Ten_MH, Ma_GV) VALUES
-('L0001', N'Công nghệ phần mềm', 'GV003'),
-('L0002', N'Công nghệ Java', 'GV005'),
-('L0003', N'IoT cơ bản', 'GV009'),
-('L0004', N'Phân tích và thiết kế yêu cầu', 'GV006'),
-('L0005', N'IoT nâng cao', 'GV008'),
-('L0006', N'Giao thức mạng máy tính', 'GV004'),
-('L0007', N'Bảo mật máy tính', 'GV010')
+INSERT INTO MonHoc(ID_MH, Ten_MH, Ma_GV, Thu, Ca) VALUES
+('MH001', N'Công nghệ phần mềm', 'GV003', N'Thứ 2', 2),
+('MH002', N'Công nghệ Java', 'GV005', N'Thứ 7', 3),
+('MH003', N'IoT cơ bản', 'GV009', N'Thứ 3', 1),
+('MH004', N'Phân tích và thiết kế yêu cầu', 'GV006', N'Thứ 5', 1),
+('MH005', N'IoT nâng cao', 'GV008', N'Thứ 5', 4),
+('MH006', N'Giao thức mạng máy tính', 'GV004', N'Thứ 3', 2),
+('MH007', N'Bảo mật máy tính', 'GV010', N'Thứ 6', 2)
 
 -- Insert Data SinhVien
 INSERT INTO SinhVien(ID_SV, HoTen, Email, SDT, MatKhau) VALUES
@@ -109,15 +110,18 @@ INSERT INTO SinhVien(ID_SV, HoTen, Email, SDT, MatKhau) VALUES
 
 -- Insert Data Lop
 INSERT INTO Lop(ID_Lop, Ma_MH, Ma_SV) VALUES
-('SV001L0001', 'L0001', 'SV001'),
-('SV001L0002', 'L0002', 'SV001'),
-('SV001L0004', 'L0004', 'SV001'),
-('SV002L0003', 'L0003', 'SV002'),
-('SV002L0005', 'L0005', 'SV002'),
-('SV003L0001', 'L0001', 'SV003'),
-('SV003L0005', 'L0005', 'SV003'),
-('SV004L0002', 'L0002', 'SV004'),
-('SV005L0001', 'L0001', 'SV005'),
-('SV005L0005', 'L0005', 'SV005')
+('MH001SV001', 'MH001', 'SV001'),
+('MH002SV001', 'MH002', 'SV001'),
+('MH004SV001', 'MH004', 'SV001'),
+('MH003SV002', 'MH003', 'SV002'),
+('MH005SV002', 'MH005', 'SV002'),
+('MH001SV003', 'MH001', 'SV003'),
+('MH005SV003', 'MH005', 'SV003'),
+('MH002SV004', 'MH002', 'SV004'),
+('MH001SV005', 'MH001', 'SV005'),
+('MH005SV005', 'MH005', 'SV005')
 
-SELECT ID_Lop, Ma_MH, Ma_SV, Ten_MH FROM Lop, MonHoc WHERE Lop.Ma_MH = MonHoc.ID_MH AND Ma_SV='SV001'
+--INSERT INTO PhieuVang(ID_PV, NgayVang, LyDo, Ma_MH) VALUES
+--('PV001', '02/11/2002', N'Ngủ quên', 'MH001')
+
+SELECT Lop.Ma_MH, Ten_MH, Thu, Ca, NgayVang, LyDo FROM Lop, MonHoc, PhieuVang WHERE Lop.Ma_MH = MonHoc.ID_MH AND MonHoc.ID_MH = PhieuVang.Ma_MH AND Ma_SV = 'SV001' AND TrangThai = N'Chấp thuận'

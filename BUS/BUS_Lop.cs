@@ -27,5 +27,23 @@ namespace BUS
         {
             return l.selectLopSV(id);
         }
+
+        // Hiển thị thông tin danh sách Lớp mà GV đang dạy
+        public DataTable selectLopGV(string id)
+        {
+            return l.selectLopGV(id);
+        }
+
+        // Hiển thị thông tin lớp học vắng cho SinhVien
+        public DataTable selectLopVang()
+        {
+            return l.selectLopVang();
+        }
+
+        // Hiểu thị thông tin lớp học bù cho SinhVien
+        public DataTable selectLopBu()
+        {
+            return l.selectLopBu();
+        }    
     }
 }

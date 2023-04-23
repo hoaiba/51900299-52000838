@@ -8,7 +8,7 @@ namespace DTO
 {
     public class DTO_PhieuVang
     {
-        private string idPv, maLop, lydo, trangthai;
+        private string idPv, maMH, lydo, trangthai;
         private DateTime ngayvang;
         
         public string get_idPv
@@ -16,10 +16,10 @@ namespace DTO
             get { return idPv; }
             set { idPv = value; }
         }
-        public string get_maLop
+        public string get_maMH
         {
-            get { return maLop; }
-            set { maLop = value; }
+            get { return maMH; }
+            set { maMH = value; }
         }
         public string get_lydo
         {
@@ -36,13 +36,13 @@ namespace DTO
             get { return ngayvang; }
             set { ngayvang = value; }
         }
-        public DTO_PhieuVang(string idPv, DateTime ngayvang, string lydo, string trangthai, string maLop)
+        public DTO_PhieuVang(string idPv, DateTime ngayvang, string lydo, string trangthai, string maMH)
         {
             this.idPv = idPv;
             this.ngayvang = ngayvang;
             this.lydo = lydo;
             this.trangthai = trangthai;
-            this.maLop = maLop;
+            this.maMH = maMH;
         }
     }
 }

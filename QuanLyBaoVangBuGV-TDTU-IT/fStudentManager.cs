@@ -61,29 +61,28 @@ namespace QuanLyBaoVangBuGV_TDTU_IT
 
         private void btnAbsentNoti_Click(object sender, EventArgs e)
         {
-            StudentManager.AbsentNoti f = new StudentManager.AbsentNoti();
+            StudentManager.AbsentNoti f = new StudentManager.AbsentNoti(id);
             f.TopLevel = false;
             panel2.Controls.Add(f);
             f.BringToFront();
             f.Show();
         }
 
-        private void btnAbsentRegister_Click(object sender, EventArgs e)
+        private void btnCompensateNoti_Click(object sender, EventArgs e)
         {
-            StudentManager.AbsentRegister f = new StudentManager.AbsentRegister();
+            StudentManager.CompensateNoti f = new StudentManager.CompensateNoti(id);
             f.TopLevel = false;
             panel2.Controls.Add(f);
             f.BringToFront();
             f.Show();
         }
 
-        private void btnAbsentStatus_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            StudentManager.AbsentStatus f = new StudentManager.AbsentStatus();
-            f.TopLevel = false;
-            panel2.Controls.Add(f);
-            f.BringToFront();
-            f.Show();
+            StudentManager.ChangePassword f = new StudentManager.ChangePassword(id);
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
         }
     }
 }

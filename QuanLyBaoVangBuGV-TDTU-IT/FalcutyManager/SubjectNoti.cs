@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace QuanLyBaoVangBuGV_TDTU_IT.FalcutyManager
 {
     public partial class SubjectNoti : Form
     {
+        public BUS_MonHoc mh;
+
         public SubjectNoti()
         {
             InitializeComponent();
@@ -19,7 +22,8 @@ namespace QuanLyBaoVangBuGV_TDTU_IT.FalcutyManager
 
         private void SubjectNoti_Load(object sender, EventArgs e)
         {
-
+            mh = new BUS_MonHoc("", "", "", 0, "", "");
+            dataGridView1.DataSource = mh.selectQuery();
         }
     }
 }

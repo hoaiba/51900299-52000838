@@ -34,10 +34,10 @@ namespace DAL
             return dt;
         }
 
-        // Lấy dữ liệu cột PhanQuyen
-        public static string selectPhanQuyen(string sql, string col)
+        // Lấy dữ liệu cột 
+        public static string selectData(string sql, string col)
         {
-            string phanquyen = "";
+            string data = "";
             connect();
             SqlCommand cmd = new SqlCommand(sql, conn);
             SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
@@ -47,29 +47,10 @@ namespace DAL
             {
                 foreach (DataRow dr in dt.Rows)
                 {
-                    phanquyen = dr[col].ToString();
+                    data = dr[col].ToString();
                 }
             }
-            return phanquyen;
-        }
-
-        // Lấy dữ liêu cột HoTen
-        public static string selectHoTen(string sql, string col)
-        {
-            string hoten = "";
-            connect();
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            dataAdapter.Fill(dt);
-            if (dt != null)
-            {
-                foreach (DataRow dr in dt.Rows)
-                {
-                    hoten = dr[col].ToString();
-                }
-            }
-            return hoten;
+            return data;
         }
     }
 }

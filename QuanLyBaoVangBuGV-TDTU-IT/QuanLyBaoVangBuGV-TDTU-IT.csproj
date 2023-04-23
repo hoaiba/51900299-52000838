@@ -55,11 +55,23 @@
     <Compile Include="FalcutyManager\AbsentNoti.Designer.cs">
       <DependentUpon>AbsentNoti.cs</DependentUpon>
     </Compile>
-    <Compile Include="FalcutyManager\ClassroomNoti.cs">
+    <Compile Include="FalcutyManager\ChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FalcutyManager\ClassroomNoti.Designer.cs">
-      <DependentUpon>ClassroomNoti.cs</DependentUpon>
+    <Compile Include="FalcutyManager\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FalcutyManager\StudentInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FalcutyManager\StudentInfo.Designer.cs">
+      <DependentUpon>StudentInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FalcutyManager\TeacherInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FalcutyManager\TeacherInfo.Designer.cs">
+      <DependentUpon>TeacherInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="FalcutyManager\CompensateNoti.cs">
       <SubType>Form</SubType>
@@ -105,17 +117,17 @@
     <Compile Include="StudentManager\AbsentNoti.Designer.cs">
       <DependentUpon>AbsentNoti.cs</DependentUpon>
     </Compile>
-    <Compile Include="StudentManager\AbsentRegister.cs">
+    <Compile Include="StudentManager\CompensateNoti.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StudentManager\AbsentRegister.Designer.cs">
-      <DependentUpon>AbsentRegister.cs</DependentUpon>
+    <Compile Include="StudentManager\CompensateNoti.Designer.cs">
+      <DependentUpon>CompensateNoti.cs</DependentUpon>
     </Compile>
-    <Compile Include="StudentManager\AbsentStatus.cs">
+    <Compile Include="StudentManager\ChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StudentManager\AbsentStatus.Designer.cs">
-      <DependentUpon>AbsentStatus.cs</DependentUpon>
+    <Compile Include="StudentManager\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
     <Compile Include="StudentManager\ClassList.cs">
       <SubType>Form</SubType>
@@ -147,17 +159,17 @@
     <Compile Include="TeacherManager\AbsentRegister.Designer.cs">
       <DependentUpon>AbsentRegister.cs</DependentUpon>
     </Compile>
-    <Compile Include="TeacherManager\AcceptList.cs">
+    <Compile Include="TeacherManager\ChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TeacherManager\AcceptList.Designer.cs">
-      <DependentUpon>AcceptList.cs</DependentUpon>
+    <Compile Include="TeacherManager\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="TeacherManager\ClassList.cs">
+    <Compile Include="TeacherManager\CompensateNoti.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TeacherManager\ClassList.Designer.cs">
-      <DependentUpon>ClassList.cs</DependentUpon>
+    <Compile Include="TeacherManager\CompensateNoti.Designer.cs">
+      <DependentUpon>CompensateNoti.cs</DependentUpon>
     </Compile>
     <Compile Include="TeacherManager\CompensateRegister.cs">
       <SubType>Form</SubType>
@@ -180,8 +192,14 @@
     <EmbeddedResource Include="FalcutyManager\AbsentNoti.resx">
       <DependentUpon>AbsentNoti.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FalcutyManager\ClassroomNoti.resx">
-      <DependentUpon>ClassroomNoti.cs</DependentUpon>
+    <EmbeddedResource Include="FalcutyManager\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FalcutyManager\StudentInfo.resx">
+      <DependentUpon>StudentInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FalcutyManager\TeacherInfo.resx">
+      <DependentUpon>TeacherInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FalcutyManager\CompensateNoti.resx">
       <DependentUpon>CompensateNoti.cs</DependentUpon>
@@ -209,11 +227,11 @@
     <EmbeddedResource Include="StudentManager\AbsentNoti.resx">
       <DependentUpon>AbsentNoti.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StudentManager\AbsentRegister.resx">
-      <DependentUpon>AbsentRegister.cs</DependentUpon>
+    <EmbeddedResource Include="StudentManager\CompensateNoti.resx">
+      <DependentUpon>CompensateNoti.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StudentManager\AbsentStatus.resx">
-      <DependentUpon>AbsentStatus.cs</DependentUpon>
+    <EmbeddedResource Include="StudentManager\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentManager\ClassList.resx">
       <DependentUpon>ClassList.cs</DependentUpon>
@@ -230,11 +248,11 @@
     <EmbeddedResource Include="TeacherManager\AbsentRegister.resx">
       <DependentUpon>AbsentRegister.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TeacherManager\AcceptList.resx">
-      <DependentUpon>AcceptList.cs</DependentUpon>
+    <EmbeddedResource Include="TeacherManager\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TeacherManager\ClassList.resx">
-      <DependentUpon>ClassList.cs</DependentUpon>
+    <EmbeddedResource Include="TeacherManager\CompensateNoti.resx">
+      <DependentUpon>CompensateNoti.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TeacherManager\CompensateRegister.resx">
       <DependentUpon>CompensateRegister.cs</DependentUpon>

@@ -33,7 +33,7 @@ namespace QuanLyBaoVangBuGV_TDTU_IT
             // Nếu đăng nhập có PhanQuyen là G thì di chuyển tới form Teacher
             if (gv.selectPhanQuyen(textEmail.Text, textPassword.Text).Contains("G"))
             {
-                fTeacherManager f = new fTeacherManager(gv.selectHoTen(textEmail.Text));
+                fTeacherManager f = new fTeacherManager(gv.selectHoTen(textEmail.Text), gv.selectID(textEmail.Text));
                 this.Hide();
                 f.ShowDialog();
                 this.Show();
@@ -42,7 +42,7 @@ namespace QuanLyBaoVangBuGV_TDTU_IT
             // Nếu đăng nhập có PhanQuyen là G thì di chuyển tới form Falcuty
             else if (gv.selectPhanQuyen(textEmail.Text, textPassword.Text).Contains("K"))
             {
-                fFalcutyManager f = new fFalcutyManager(gv.selectHoTen(textEmail.Text));
+                fFalcutyManager f = new fFalcutyManager(gv.selectHoTen(textEmail.Text), gv.selectID(textEmail.Text));
                 this.Hide();
                 f.ShowDialog();
                 this.Show();
